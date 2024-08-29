@@ -1,0 +1,23 @@
+.bg-gradient-primary {
+    background: linear-gradient(to right, #00bfff, #1e90ff); /* Biru laut gradien */
+}
+
+.sidebar {
+    background-color: #00bfff; /* Biru laut solid */
+}
+
+.sidebar .nav-link {
+    color: #ffffff; /* Warna teks putih untuk kontras */
+}
+
+.sidebar .nav-link:hover {
+    background-color: #1e90ff; /* Warna latar belakang saat hover */
+}
+
+.sidebar .sidebar-brand {
+    color: #ffffff; /* Warna teks putih untuk brand */
+}
+
+.sidebar .sidebar-brand:hover {
+    color: #ffffff; /* Warna teks putih untuk brand saat hover */
+}
