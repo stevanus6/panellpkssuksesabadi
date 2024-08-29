@@ -71,9 +71,22 @@
             margin-bottom: 10px;
         }
 
+        .berkas{
+            display:flex;
+            font-weight: 900;
+            justify-content: space-between;
+            font-size: 12px;
+        }
+
         .red-line {
             height: 2px;
             background-color: #ff0000;
+            margin-bottom: 20px;
+        }
+
+        .green-line{
+            height: 2px;
+            background-color: #00ff00;
             margin-bottom: 20px;
         }
 
@@ -89,7 +102,7 @@
             padding: 10px;
             margin-bottom: 10px;
             border: none;
-            border-radius: 7px;
+            border-radius: 50px;
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
@@ -100,7 +113,7 @@
 
         .button-yellow {
             background-color: #ffd700;
-            color: black;
+            color: white;
         }
 
         .button-green {
@@ -116,11 +129,11 @@
         .toggle-buttons {
             width: 0;
             height: 0;
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-top: 15px solid #888;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid #888;
             position: absolute;
-            bottom: -15px;
+            bottom: 8px;
             left: 50%;
             transform: translateX(-50%);
             cursor: pointer;
@@ -162,7 +175,10 @@
                         <div class="card-content">
                             <div class="employee-name">NAMA: YUYUN NUR SAFITRI</div>
                             <div class="status">STATUS BERKAS: BELUM LENGKAP</div>
-                            <div class="berkas">BERKAS <span>14/15</span></div>
+                            <div class="berkas">
+                                <span>BERKAS</span>
+                                <span>14/15</span>
+                            </div>
                             <div class="red-line"></div>
                             <div class="button-container">
                                 <button class="button button-yellow" onclick="window.location.href='editdata_fdw.php'">PERBAIKI DATA</button>
@@ -179,7 +195,7 @@
                             <div class="employee-name">NAMA: YUYUN NUR SAFITRI</div>
                             <div class="status">STATUS BERKAS: LENGKAP</div>
                             <div class="berkas">BERKAS <span>15/15</span></div>
-                            <div class="red-line"></div>
+                            <div class="green-line"></div>
                             <div class="button-container">
                                 <button class="button button-yellow" onclick="window.location.href='editdata_fdw.php'">PERBAIKI DATA</button>
                                 <button class="button button-green" onclick="window.location.href='editberkas_fdw.php'">LENGKAPI BERKAS</button>
@@ -219,13 +235,14 @@
         function toggleButtons(button) {
             const buttonContainer = button.previousElementSibling;
             const isShown = buttonContainer.style.maxHeight !== '0px';
-            document.querySelectorAll('.button-container').forEach(container => {
-                container.style.maxHeight = '0px';
-                container.nextElementSibling.classList.add('collapsed');
-            });
+            // document.querySelectorAll('.button-container').forEach(container => {
+            //     container.style.maxHeight = '0px';
+            //     // container.nextElementSibling.classList.add('collapsed');
+            // });
 
-            buttonContainer.style.maxHeight = isShown ? '0px' : '150px';
+            buttonContainer.style.maxHeight = isShown ? '0px' : '160px';
             button.classList.toggle('collapsed', isShown);
+            console.log(document.querySelectorAll('.container'));
         }
     </script>
     
