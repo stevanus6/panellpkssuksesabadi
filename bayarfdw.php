@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php 
+// $chr = 65;
+// for ($i = 0; $i < 26; $i++) {
+//     echo $i+1 . " = " . (chr($chr+$i)) . "<br>";
+//     $angka = $i + 1;
+//     $huruf = chr($chr+$i);
+
+// }
+// die;
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,7 +72,14 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <?php for($i = 0; $i <= 25; $i++):?> 
+                                            <tr>
+                                                <td><?= $i ?></td>
+                                                <td>Tabel <?= chr(65+$i) ?></td>
+                                                <td>Deskripsi Tabel <?= chr(65+$i) ?></td>
+                                            </tr>
+                                        <?php endfor; ?>
+                                        <!-- <tr>
                                             <td>1</td>
                                             <td>Tabel A</td>
                                             <td>Deskripsi Tabel A</td>
@@ -82,7 +99,8 @@
                                             <td>Deskripsi Tabel C</td>
                                             <td></td>
                                           
-                                        </tr>
+                                        </tr> -->
+
                                         <!-- Tambahkan lebih banyak baris sesuai kebutuhan -->
                                     </tbody>
                                 </table>

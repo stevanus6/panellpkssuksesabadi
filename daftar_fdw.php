@@ -96,10 +96,10 @@
             max-height: 0;
         }
 
-        /* .button-container .collapsed{
-            max-height: 164px;
+        .coleps .button-container{
             transition: max-height 0.3s ease-out;
-        } */
+            max-height: 164px;
+        }
 
         .button {
             display: block;
@@ -147,6 +147,7 @@
 
         .toggle-buttons.collapsed {
              transform: translateX(-50%) rotate(180deg);
+             max-height: 160px;
         }
 
         .card:hover {
@@ -209,6 +210,51 @@
                             <div class="toggle-buttons"></div>
                         </div>
                     </div>
+                    <div class="card">
+                        <img src="https://i.ibb.co/n8r11sW/IMG-20230417-WA0003.jpg" alt="Profile Picture">
+                        <div class="card-content">
+                            <div class="employee-name">NAMA: YUYUN NUR SAFITRI</div>
+                            <div class="status">STATUS BERKAS: LENGKAP</div>
+                            <div class="berkas">BERKAS <span>15/15</span></div>
+                            <div class="green-line"></div>
+                            <div class="button-container">
+                                <button class="button button-yellow" onclick="window.location.href='editdata_fdw.php'">PERBAIKI DATA</button>
+                                <button class="button button-green" onclick="window.location.href='editberkas_fdw.php'">LENGKAPI BERKAS</button>
+                                <button class="button button-red" onclick="window.location.href='MD.php'">MD</button>
+                            </div>
+                            <div class="toggle-buttons"></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://i.ibb.co/n8r11sW/IMG-20230417-WA0003.jpg" alt="Profile Picture">
+                        <div class="card-content">
+                            <div class="employee-name">NAMA: YUYUN NUR SAFITRI</div>
+                            <div class="status">STATUS BERKAS: LENGKAP</div>
+                            <div class="berkas">BERKAS <span>15/15</span></div>
+                            <div class="green-line"></div>
+                            <div class="button-container">
+                                <button class="button button-yellow" onclick="window.location.href='editdata_fdw.php'">PERBAIKI DATA</button>
+                                <button class="button button-green" onclick="window.location.href='editberkas_fdw.php'">LENGKAPI BERKAS</button>
+                                <button class="button button-red" onclick="window.location.href='MD.php'">MD</button>
+                            </div>
+                            <div class="toggle-buttons"></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://i.ibb.co/n8r11sW/IMG-20230417-WA0003.jpg" alt="Profile Picture">
+                        <div class="card-content">
+                            <div class="employee-name">NAMA: YUYUN NUR SAFITRI</div>
+                            <div class="status">STATUS BERKAS: LENGKAP</div>
+                            <div class="berkas">BERKAS <span>15/15</span></div>
+                            <div class="green-line"></div>
+                            <div class="button-container">
+                                <button class="button button-yellow" onclick="window.location.href='editdata_fdw.php'">PERBAIKI DATA</button>
+                                <button class="button button-green" onclick="window.location.href='editberkas_fdw.php'">LENGKAPI BERKAS</button>
+                                <button class="button button-red" onclick="window.location.href='MD.php'">MD</button>
+                            </div>
+                            <div class="toggle-buttons"></div>
+                        </div>
+                    </div>
                 </div>
                 <!-- /.container -->
 
@@ -240,22 +286,28 @@
         // function toggleButtons(button) {
         //     const buttonContainer = button.previousElementSibling;
         //     const isShown = buttonContainer.style.maxHeight !== '0px';
-        //     document.querySelectorAll('.button-container').forEach(container => {
-        //         container.style.maxHeight = '0px';
-        //         container.nextElementSibling.classList.add('collapsed');
-        //     });
+        //     // document.querySelectorAll('.button-container').forEach(container => {
+        //     //     container.style.maxHeight = '0px';
+        //     //     // container.nextElementSibling.classList.add('collapsed');
+        //     // });
 
-        //     buttonContainer.style.maxHeight = isShown ? '0px' : '164px';
+        //     buttonContainer.style.maxHeight = isShown ? '160px' : '0px';
         //     button.classList.toggle('collapsed', isShown);
-            
         //     console.log(document.querySelectorAll('.container'));
         // }
-        $(document).ready(function() {
-    $('.toggle-buttons').click(function() {
-        $('.toggle-buttons').toggleClass('collapsed');
-        const maxHeight = $('.toggle-buttons').hasClass('collapsed') ? '164px' : '0px';
-        $('.button-container').css('max-height', maxHeight);
-    });
+// console.log();
+// });
+
+$(document).on('click', '.card', function() {
+  const $this = $(this);
+  const toggleButtons = $('.toggle-buttons', $this);
+
+  // Toggle 'coleps' class for the clicked card
+  $this.toggleClass('coleps').siblings().removeClass('coleps');
+  $('.toggle-buttons').not(toggleButtons).removeClass('collapsed');
+
+  // Toggle 'collapsed' class for the clicked card's buttons
+  toggleButtons.toggleClass('collapsed');
 });
     </script>
     
@@ -268,3 +320,4 @@
 </body>
 
 </html>
+a
