@@ -96,6 +96,11 @@
             max-height: 0;
         }
 
+        /* .button-container .collapsed{
+            max-height: 164px;
+            transition: max-height 0.3s ease-out;
+        } */
+
         .button {
             display: block;
             width: 100%;
@@ -141,7 +146,7 @@
         }
 
         .toggle-buttons.collapsed {
-            transform: translateX(-50%) rotate(180deg);
+             transform: translateX(-50%) rotate(180deg);
         }
 
         .card:hover {
@@ -185,7 +190,7 @@
                                 <button class="button button-green" onclick="window.location.href='editberkas_fdw.php'">LENGKAPI BERKAS</button>
                                 <button class="button button-red" onclick="window.location.href='MD.php'">MD</button>
                             </div>
-                            <div class="toggle-buttons" onclick="toggleButtons(this)"></div>
+                            <div class="toggle-buttons"></div>
                         </div>
                     </div>
 
@@ -201,7 +206,7 @@
                                 <button class="button button-green" onclick="window.location.href='editberkas_fdw.php'">LENGKAPI BERKAS</button>
                                 <button class="button button-red" onclick="window.location.href='MD.php'">MD</button>
                             </div>
-                            <div class="toggle-buttons" onclick="toggleButtons(this)"></div>
+                            <div class="toggle-buttons"></div>
                         </div>
                     </div>
                 </div>
@@ -232,18 +237,26 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <script>
-        function toggleButtons(button) {
-            const buttonContainer = button.previousElementSibling;
-            const isShown = buttonContainer.style.maxHeight !== '0px';
-            // document.querySelectorAll('.button-container').forEach(container => {
-            //     container.style.maxHeight = '0px';
-            //     // container.nextElementSibling.classList.add('collapsed');
-            // });
+        // function toggleButtons(button) {
+        //     const buttonContainer = button.previousElementSibling;
+        //     const isShown = buttonContainer.style.maxHeight !== '0px';
+        //     document.querySelectorAll('.button-container').forEach(container => {
+        //         container.style.maxHeight = '0px';
+        //         container.nextElementSibling.classList.add('collapsed');
+        //     });
 
-            buttonContainer.style.maxHeight = isShown ? '0px' : '160px';
-            button.classList.toggle('collapsed', isShown);
-            console.log(document.querySelectorAll('.container'));
-        }
+        //     buttonContainer.style.maxHeight = isShown ? '0px' : '164px';
+        //     button.classList.toggle('collapsed', isShown);
+            
+        //     console.log(document.querySelectorAll('.container'));
+        // }
+        $(document).ready(function() {
+    $('.toggle-buttons').click(function() {
+        $('.toggle-buttons').toggleClass('collapsed');
+        const maxHeight = $('.toggle-buttons').hasClass('collapsed') ? '164px' : '0px';
+        $('.button-container').css('max-height', maxHeight);
+    });
+});
     </script>
     
     <!-- Include Footer -->
@@ -255,4 +268,3 @@
 </body>
 
 </html>
-a

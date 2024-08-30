@@ -56,11 +56,11 @@
         </a>
         <div id="collapseBiodata" class="collapse" aria-labelledby="headingBiodata" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="daftar_fdw.php">
+                <a class="collapse-item" href="daftar_fdw">
                     <i class="fas fa-list-ul fa-sm fa-fw mr-2"></i>
                     Daftar TKW
                 </a>
-                <a class="collapse-item" href="fdw_singapore.php">
+                <a class="collapse-item" href="fdw_singapore">
                     <i class="fas fa-plus-circle fa-sm fa-fw mr-2"></i>
                     Tambah TKW
                 </a>
@@ -104,19 +104,19 @@
         <div id="collapsePembayaran" class="collapse" aria-labelledby="headingPembayaran"
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="pembayaran_agency.php">
+                <a class="collapse-item" href="pembayaran_agency">
                     <i class="fas fa-building fa-sm fa-fw mr-2"></i>
                     Pembayaran Agency
                 </a>
-                <a class="collapse-item" href="pembayaran_pl.php">
+                <a class="collapse-item" href="pembayaran_pl">
                     <i class="fas fa-user-tie fa-sm fa-fw mr-2"></i>
                     Pembayaran PL
                 </a>
-                <a class="collapse-item" href="bayargaji.php">
+                <a class="collapse-item" href="bayargaji">
                     <i class="fas fa-money-bill fa-sm fa-fw mr-2"></i>
                     Pembayaran Gaji
                 </a>
-                <a class="collapse-item" href="bayarfdw.php">
+                <a class="collapse-item" href="bayarfdw">
                     <i class="fas fa-hand-holding-usd fa-sm fa-fw mr-2"></i>
                     Pembayaran TKW
                 </a>
@@ -133,15 +133,15 @@
         <div id="collapseDebt" class="collapse" aria-labelledby="headingDebt"
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="debit_pl.php">
+                <a class="collapse-item" href="debit_pl">
                     <i class="fas fa-money-bill fa-sm fa-fw mr-2"></i>
                     Kasbon PL
                 </a>
-                <a class="collapse-item" href="debit_karyawan.php">
+                <a class="collapse-item" href="debit_karyawan">
                     <i class="fas fa-user-tie fa-sm fa-fw mr-2"></i>
-                    KAsbon Karyawan 
+                    Kasbon Karyawan 
                 </a>
-                <a class="collapse-item" href="debit_fdw.php">
+                <a class="collapse-item" href="debit_fdw">
                     <i class="fas fa-hand-holding-usd fa-sm fa-fw mr-2"></i>
                     Kasbon TKW
                 </a>
@@ -183,10 +183,10 @@
     </a>
     <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="hr.php">
+            <a class="collapse-item" href="hr">
                 <i class="fas fa-fw fa-user"></i> Data Karyawan
             </a>
-            <a class="collapse-item" href="gajiharian.php">
+            <a class="collapse-item" href="gajiharian">
                 <i class="fas fa-fw fa-dollar-sign"></i> Gaji Harian
             </a>
         </div>
