@@ -226,26 +226,158 @@
     <script src="js/sweetalert-utils.js" defer></script>
     <script src="js/sweetalert-handler.js"></script>
 
-    <script>
-        // Helper function to parse currency input and return a number
-        function parseCurrency(value) {
-            return parseFloat(value.replace(/[^0-9.,]/g, '').replace(',', '.')) || 0;
-        }
+    <!-- <script>
+        // // Helper function to parse currency input and return a number
+        // function parseCurrency(value) {
+        //     return parseFloat(value.replace(/[^0-9.,]/g, '').replace(',', '.')) || 0;
+        // }
 
-        // Helper function to format number as currency
-        function formatCurrency(value) {
-            return new Intl.NumberFormat('id-ID', {
-                style: 'currency',
-                currency: 'IDR',
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 0
-            }).format(value);
-        }
+        // // Helper function to format number as currency
+        // function formatCurrency(value) {
+        //     return new Intl.NumberFormat('id-ID', {
+        //         style: 'currency',
+        //         currency: 'IDR',
+        //         minimumFractionDigits: 0,
+        //         maximumFractionDigits: 0
+        //     }).format(value);
+        // }
 
-        // Event listener for input field
-        document.getElementById('daily-wage').addEventListener('input', function() {
-            let inputValue = this.value;
-            let numericValue = parseCurrency(inputValue);
+        // // Event listener for input field
+        // document.getElementById('daily-wage').addEventListener('input', function() {
+        //     let inputValue = this.value;
+        //     let numericValue = parseCurrency(inputValue);
+        //     let formattedValue = formatCurrency(numericValue);
+        //     this.value = formattedValue;
+        // });
+
+        // // Handle calculate button click
+        // document.getElementById('calculate-btn').addEventListener('click', function() {
+        //     const employeeName = document.getElementById('employee-name').value;
+        //     const workDays = parseInt(document.getElementById('work-days').value) || 0;
+        //     const leaveDays = parseInt(document.getElementById('leave-days').value) || 0;
+        //     const vacationDays = parseInt(document.getElementById('vacation-days').value) || 0;
+        //     const unexcusedDays = parseInt(document.getElementById('unexcused-days').value) || 0;
+        //     const dailyWageStr = document.getElementById('daily-wage').value;
+        //     const dailyWage = parseCurrency(dailyWageStr);
+
+        //     // Calculate salary
+        //     const totalDays = workDays - (leaveDays + vacationDays + unexcusedDays);
+        //     const totalSalary = totalDays * dailyWage;
+
+        //     // Display result
+        //     const resultDiv = document.getElementById('result');
+        //     resultDiv.style.display = 'block';
+        //     resultDiv.innerHTML = `<strong>Nama Karyawan:</strong> ${employeeName}<br>
+        //                            <strong>Total Gaji Diterima:</strong> ${formatCurrency(totalSalary)}<br>
+        //                            <strong>Nominal Gaji Harian:</strong> ${formatCurrency(dailyWage)}<br>
+        //                            <strong>Hari Kerja yang Dihitung:</strong> ${totalDays}`;
+
+        //     // Store the result in a global variable for further use
+        //     window.invoiceData = {
+        //         employeeName: employeeName,
+        //         totalSalary: totalSalary,
+        //         dailyWage: dailyWage,
+        //         totalDays: totalDays
+        //     };
+        // });
+
+        // // Handle view invoice button click
+        // document.getElementById('view-invoice-btn').addEventListener('click', function() {
+        //     if (!window.invoiceData) {
+        //         Swal.fire('Please calculate the salary first!');
+        //         return;
+        //     }
+
+        //     const {
+        //         employeeName,
+        //         totalSalary,
+        //         dailyWage,
+        //         totalDays
+        //     } = window.invoiceData;
+        //     const invoiceWindow = window.open('', '_blank');
+        //     invoiceWindow.document.write(`
+        //         <html>
+        //         <head>
+        //             <title>LPKS SUKSES ABADI JAYA</title>
+        //             <style>
+        //                 body { font-family: Arial, sans-serif; }
+        //                 .invoice { margin: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        //                 .invoice h1 { text-align: center; }
+        //                 .invoice-table { width: 100%; border-collapse: collapse; }
+        //                 .invoice-table th, .invoice-table td { border: 1px solid #ddd; padding: 8px; }
+        //                 .invoice-table th { background-color: #f2f2f2; }
+        //             </style>
+        //         </head>
+        //         <body>
+        //             <div class="invoice">
+        //                 <h1>Invoice</h1>
+        //                 <table class="invoice-table">
+        //                     <tr>
+        //                         <th>Nama Karyawan</th>
+        //                         <td>${employeeName}</td>
+        //                     </tr>
+        //                     <tr>
+        //                         <th>Total Gaji Diterima</th>
+        //                         <td>${formatCurrency(totalSalary)}</td>
+        //                     </tr>
+        //                     <tr>
+        //                         <th>Nominal Gaji Harian</th>
+        //                         <td>${formatCurrency(dailyWage)}</td>
+        //                     </tr>
+        //                     <tr>
+        //                         <th>Hari Kerja yang Dihitung</th>
+        //                         <td>${totalDays}</td>
+        //                     </tr>
+        //                 </table>
+        //             </div>
+        //         </body>
+        //         </html>
+        //     `);
+        // });
+        <script> -->
+        <script>
+    // Helper function to parse currency input and return a number
+    function parseCurrency(value) {
+        return parseFloat(value.replace(/[^0-9.,]/g, '').replace(',', '.')) || 0;
+    }
+
+    // Helper function to format number as currency (IDR)
+    function formatCurrency(value) {
+        return new Intl.NumberFormat('id-ID', {
+            style: 'currency',
+            currency: 'IDR',
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0
+        }).format(value);
+    }
+
+    // Module to manage invoice data
+    const invoiceModule = (function() {
+        let invoiceData = null;
+        return {
+            setInvoiceData: function(data) {
+                invoiceData = data;
+            },
+            getInvoiceData: function() {
+                return invoiceData;
+            }
+        };
+    })();
+
+    // Ensure the DOM is fully loaded before adding event listeners
+    document.addEventListener('DOMContentLoaded', function() {
+        const dailyWageInput = document.getElementById('daily-wage');
+
+        // Store the raw input to handle continuous typing
+        dailyWageInput.addEventListener('input', function() {
+            let numericValue = parseCurrency(this.value.replace(/\./g, '')); // Remove dots before parsing
+            this.setAttribute('data-raw', numericValue); // Store the raw numeric value
+            this.value = numericValue.toLocaleString('id-ID'); // Show the raw input with thousand separators
+        });
+
+        // Format the value as IDR when the input loses focus
+        dailyWageInput.addEventListener('blur', function() {
+            let numericValue = parseFloat(this.getAttribute('data-raw'));
             let formattedValue = formatCurrency(numericValue);
             this.value = formattedValue;
         });
@@ -257,11 +389,11 @@
             const leaveDays = parseInt(document.getElementById('leave-days').value) || 0;
             const vacationDays = parseInt(document.getElementById('vacation-days').value) || 0;
             const unexcusedDays = parseInt(document.getElementById('unexcused-days').value) || 0;
-            const dailyWageStr = document.getElementById('daily-wage').value;
-            const dailyWage = parseCurrency(dailyWageStr);
+            const dailyWageStr = document.getElementById('daily-wage').getAttribute('data-raw');
+            const dailyWage = parseFloat(dailyWageStr) || 0; // Parse raw input as float
 
             // Calculate salary
-            const totalDays = workDays - (leaveDays + vacationDays + unexcusedDays);
+            const totalDays = Math.max(0, workDays - (leaveDays + vacationDays + unexcusedDays));
             const totalSalary = totalDays * dailyWage;
 
             // Display result
@@ -272,18 +404,19 @@
                                    <strong>Nominal Gaji Harian:</strong> ${formatCurrency(dailyWage)}<br>
                                    <strong>Hari Kerja yang Dihitung:</strong> ${totalDays}`;
 
-            // Store the result in a global variable for further use
-            window.invoiceData = {
+            // Store the result in the module
+            invoiceModule.setInvoiceData({
                 employeeName: employeeName,
                 totalSalary: totalSalary,
                 dailyWage: dailyWage,
                 totalDays: totalDays
-            };
+            });
         });
 
         // Handle view invoice button click
         document.getElementById('view-invoice-btn').addEventListener('click', function() {
-            if (!window.invoiceData) {
+            const invoiceData = invoiceModule.getInvoiceData();
+            if (!invoiceData) {
                 Swal.fire('Please calculate the salary first!');
                 return;
             }
@@ -293,8 +426,10 @@
                 totalSalary,
                 dailyWage,
                 totalDays
-            } = window.invoiceData;
+            } = invoiceData;
+
             const invoiceWindow = window.open('', '_blank');
+            invoiceWindow.document.open(); // Ensure the document is open
             invoiceWindow.document.write(`
                 <html>
                 <head>
@@ -333,8 +468,11 @@
                 </body>
                 </html>
             `);
+            invoiceWindow.document.close(); // Ensure the document is closed
         });
-    </script>
+    });
+</script>
+
 </body>
 
 </html>

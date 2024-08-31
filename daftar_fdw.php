@@ -26,13 +26,19 @@
             background-color: #f4f4f4;
         }
 
+        #content #content-wrapper {
+            overflow: hidden;
+        }
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            min-height:  100px;
+            max-height: 100vh;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 30px;
+            margin: 0 auto;
+            width: 90% !important;
             padding: 20px;
         }
 
@@ -41,6 +47,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 300px;
+            height: inherit;
             position: relative;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -175,7 +182,7 @@
                 <?php include 'topbar.php'; ?>
 
                 <!-- Begin Page Content -->
-                <div class="container">
+                <div class="container d-flex justify-content-start">
                     <div class="card">
                         <img src="https://i.ibb.co/n8r11sW/IMG-20230417-WA0003.jpg" alt="Profile Picture">
                         <div class="card-content">
@@ -320,4 +327,3 @@ $(document).on('click', '.card', function() {
 </body>
 
 </html>
-a
