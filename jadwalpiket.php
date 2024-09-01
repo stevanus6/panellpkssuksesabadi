@@ -70,6 +70,11 @@
                                             <td>Tabel C</td>
                                             <td>Deskripsi Tabel C</td>
                                         </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Tabel C</td>
+                                            <td>Deskripsi Tabel C</td>
+                                        </tr>
                                         <!-- Tambahkan lebih banyak baris sesuai kebutuhan -->
                                     </tbody>
                                 </table>
@@ -83,6 +88,7 @@
             </div>
             <!-- End of Main Content -->
 
+            <?php include 'footer.php'; ?>
         </div>
         <!-- End of Content Wrapper -->
 
@@ -95,7 +101,6 @@
     </a>
                 
     <!-- Include Footer -->
-    <?php include 'footer.php'; ?>
 
     <!-- Include Logout Modal -->
     <?php include 'logout_modal.php'; ?>
@@ -131,6 +136,7 @@
                     "ordering": true,
                     "info": true,
                     "responsive": true
+                    "fixedHeight": true
                 });
             }
         });

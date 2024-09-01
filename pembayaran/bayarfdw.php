@@ -72,11 +72,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php for($i = 0; $i <= 25; $i++):?> 
+                                        <?php for($i = 1; $i <= 26; $i++):?> 
                                             <tr>
                                                 <td><?= $i ?></td>
-                                                <td>Tabel <?= chr(65+$i) ?></td>
-                                                <td>Deskripsi Tabel <?= chr(65+$i) ?></td>
+                                                <td>Tabel <?= chr(64+$i) ?></td>
+                                                <td>Deskripsi Tabel <?= chr(64+$i) ?></td>
+                                                <td><?=$i?> hari</td>
                                             </tr>
                                         <?php endfor; ?>
                                         <!-- <tr>

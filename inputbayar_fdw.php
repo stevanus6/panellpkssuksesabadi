@@ -222,7 +222,8 @@
 
     <script>
         function handleCurrencyInput(input) {
-            let numericValue = parseInt(input.value.replace(/[^0-9]/g, ''), 10) || 0;
+            let numericValue = parseInt(input.value.replace(/[^0-9]/g, '')) || 0;
+            console.log(numericValue); 
             if (numericValue) {
                 input.value = numericValue.toLocaleString('id-ID', {
                     style: 'currency',
