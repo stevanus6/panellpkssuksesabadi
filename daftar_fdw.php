@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php 
+    // echo "<pre>";
+    // var_dump(basename($_SERVER['SCRIPT_NAME']));
+    // die;
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,12 +49,13 @@
 
         .card {
             background-color: #fff;
-            border-radius: 10px;
+            border-radius: 1rem !important;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 300px;
             height: inherit;
             position: relative;
             overflow: hidden;
+            align-self: flex-start;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 

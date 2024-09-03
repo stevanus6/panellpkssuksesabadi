@@ -132,7 +132,7 @@
                                             <!-- Jumlah Dibayarkan -->
                                             <div class="form-group">
                                                 <label for="amount-paid">Jumlah Dibayarkan:</label>
-                                                <input type="number" class="form-control" id="amount-paid" name="amount_paid" placeholder="Masukkan Jumlah Dibayarkan">
+                                                <input type="text" class="form-control" id="amount-paid" name="amount_paid" placeholder="Masukkan Jumlah Dibayarkan">
                                             </div>
 
                                             <!-- Keterangan Pembayaran -->
@@ -208,13 +208,14 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/sweetalert-utils.js" defer></script>
     <script src="js/sweetalert-handler.js"></script>
-
+    
     <!-- Page level plugins -->
     <script src="vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
+    
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+    <script src="js/format1.js"></script>
 
     <!-- Logout Modal-->
     <?php include 'logout_modal.php'; ?>
