@@ -114,17 +114,17 @@
                                                 <select class="form-control" id="role" name="role" required>
                                                     <option value="">Pilih Role</option>
                                                     <?php
-                                                    // Assuming you have a database connection named $conn
-                                                    include 'db_connection.php'; // Ensure the connection file is included
-                                                    $sql = "SELECT id, role_name FROM roles";
-                                                    $result = $conn->query($sql);
-                                                    if ($result->num_rows > 0) {
-                                                        while ($row = $result->fetch_assoc()) {
-                                                            echo "<option value='" . $row['id'] . "'>" . $row['role_name'] . "</option>";
-                                                        }
-                                                    } else {
-                                                        echo "<option value=''>No roles available</option>";
-                                                    }
+                                                    // // Assuming you have a database connection named $conn
+                                                    // include 'db_connection.php'; // Ensure the connection file is included
+                                                    // $sql = "SELECT id, role_name FROM roles";
+                                                    // $result = $conn->query($sql);
+                                                    // if ($result->num_rows > 0) {
+                                                    //     while ($row = $result->fetch_assoc()) {
+                                                    //         echo "<option value='" . $row['id'] . "'>" . $row['role_name'] . "</option>";
+                                                    //     }
+                                                    // } else {
+                                                    //     echo "<option value=''>No roles available</option>";
+                                                    // }
                                                     ?>
                                                 </select>
                                             </div>

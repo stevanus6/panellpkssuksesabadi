@@ -84,8 +84,8 @@
                             <p id="dateTime"></p>
                         </div>
                         <div class="buttons">
-                            <a href="fdw_singapore.php" class="btn btn-primary">TKW Singapore</a>
-                            <a href="fdw_hongkong.php" class="btn btn-secondary">TKW Hongkong</a>
+                            <a href="./fdw_singapore" class="btn btn-primary">TKW Singapore</a>
+                            <a href="./fdw_hongkong" class="btn btn-secondary">TKW Hongkong</a>
                         </div>
                     </div>
 
