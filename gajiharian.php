@@ -81,8 +81,7 @@
                 </div>
                 <!-- /.container-fluid -->
 
-                <!-- Include Footer -->
-                <?php include 'footer.php'; ?>
+
 
             </div>
             <!-- End of Main Content -->
@@ -133,10 +132,11 @@
             }
         });
     </script>
-    
+
     <!-- Include Logout Modal -->
     <?php include 'logout_modal.php'; ?>
-
+    <!-- Include Footer -->
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>
