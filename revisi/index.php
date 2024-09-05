@@ -6,24 +6,23 @@
     <meta name="description" content="Sukses Abadi Jaya">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./style/S_main.css">
+    <link rel="stylesheet" type="text/css" href="./style/S_sidebar.css">
+    
     <title>SUKSES ABADI JAYA</title>
 </head>
 <body>
     <div class="wrapper">
-        <aside class="sidebar bg-primary bg-gradient">
-         <div class="brand">
-             <h1 class="text-white text-center fs-3 py-3">SUKSES ABADI JAYA</h1>
-         </div>   
-        </aside>
-        <div class="main-side">
+       <?php include __DIR__ . '/layout/sidebar.php' ?>
+        <div class="main-side mb-4">
             <nav>USER</nav>
-            <main class="container-fluid">
-                <img src="assets/undraw_website.svg" alt="welcome" srcset="">
+            <main>
+                <?php include __DIR__ . '/layout/main.php' ?>
             </main>
-        
-        <footer>sdkfhsdfjksdh</footer>
+            <footer>Copyright 2024 Sukses Jaya Abadi. Hak Cipta Dilindungi Undang-undang</footer>
+        </div>
     </div>
 </body>
+
 <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
 </html>
