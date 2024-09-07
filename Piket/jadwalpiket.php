@@ -135,8 +135,8 @@
                     "searching": true,
                     "ordering": true,
                     "info": true,
-                    "responsive": true
-                    "fixedHeight": true
+                    "responsive": true,
+                    "fixedHeight": true,
                 });
             }
         });
