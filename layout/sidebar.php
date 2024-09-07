@@ -24,7 +24,7 @@
 <body>
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion sticky" id="accordionSidebar">
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.php">
         <div class="sidebar-brand-icon rotate-n-15"></div>
         <div class="sidebar-brand-text mx-3">SUKSES ABADI JAYA<sup></sup></div>
     </a>
@@ -34,7 +34,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="index.php">
+        <a class="nav-link" href="../index.php">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
         </a>
@@ -71,9 +71,9 @@
 
     <!-- Nav Item - Tracking Files Collapse Menu -->
     <li class="nav-item">
-    <a class="nav-link" href="/">
+    <a class="nav-link" href="../trackingfile/file.php">
             <i class="fas fa-fw fa-wrench"></i>
-            <span>Dashboard</span>
+            <span>Tracking Files</span>
         </a>
     </li>
 
