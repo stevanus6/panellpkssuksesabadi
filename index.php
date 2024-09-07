@@ -61,7 +61,14 @@
     <div id="wrapper">
 
         <!-- Include Sidebar -->
-        <?php include 'sidebar.php'; ?>
+        <?php 
+            if (str_contains($_SERVER['SCRIPT_NAME'],'index.php')){
+                include 'layout/sidebar.php';
+            }
+            else{
+                include '../layout/sidebar.php';
+            }
+        ?>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -70,7 +77,14 @@
             <div id="content">
 
                 <!-- Include Topbar -->
-                <?php include 'topbar.php'; ?>
+                <?php 
+            if (str_contains($_SERVER['SCRIPT_NAME'],'index.php')){
+                include 'layout/topbar.php';
+            }
+            else{
+                include '../layout/topbar.php';
+            }
+        ?>
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -96,10 +110,24 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php include 'footer.php'; ?>
+            <?php 
+            if (str_contains($_SERVER['SCRIPT_NAME'],'index.php')){
+                include 'layout/footer.php';
+            }
+            else{
+                include '../layout/footer.php';
+            }
+        ?>
 
             <!-- Logout -->
-            <?php include 'logout_modal.php'; ?>
+            <?php 
+            if (str_contains($_SERVER['SCRIPT_NAME'],'index.php')){
+                include 'layout/logout_modal.php';
+            }
+            else{
+                include '../layout/logout_modal.php';
+            }
+        ?>
         </div>
         <!-- End of Content Wrapper -->
 
