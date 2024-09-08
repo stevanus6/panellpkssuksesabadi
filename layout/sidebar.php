@@ -71,7 +71,7 @@
 
     <!-- Nav Item - Tracking Files Collapse Menu -->
     <li class="nav-item">
-    <a class="nav-link" href="../trackingfile/file.php">
+    <a class="nav-link" href="<?= str_contains($_SERVER['SCRIPT_NAME'],'index.php') ? "./Trackingberkas/tracking_berkas" : (str_contains($_SERVER['SCRIPT_NAME'],'tracking_berkas.php') ? "#" : "../Trackingberkas/tracking_berkas")?>">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Tracking Files</span>
         </a>

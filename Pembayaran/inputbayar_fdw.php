@@ -227,7 +227,9 @@
             if (numericValue) {
                 input.value = numericValue.toLocaleString('id-ID', {
                     style: 'currency',
-                    currency: 'IDR'
+                    currency: 'IDR',
+                    maximumFractionDigits: 2,
+                    minimumFractionDigits: 0,
                 });
             } else {
                 input.value = '';
@@ -249,8 +251,9 @@
             const salaryDeductionStr = document.getElementById('salary-deduction').value;
             const totalSalary = parseCurrency(totalSalaryStr);
             const salaryDeduction = parseCurrency(salaryDeductionStr);
-
             const netSalary = totalSalary - salaryDeduction;
+
+            
 
             document.getElementById('net-salary').value = netSalary.toLocaleString('id-ID', {
                 style: 'currency',

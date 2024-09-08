@@ -53,7 +53,7 @@
                                         <th>ID</th>
                                         <th>Nama Karyawan</th>
                                         <th>Total dokumen</th>
-                                        <th>Jumlah Dokumen</th>
+                                        <th>Jumlah Dokumen divalidasi</th>
                                         <th>Lihat Dokumen</th>
                                         </tr>
                                     </thead>

@@ -34,7 +34,8 @@
                             <div class="button-container">
                                 <button class="button button-yellow" onclick="window.location.href='editdata_fdw.php'">PERBAIKI DATA</button>
                                 <button class="button button-green" onclick="window.location.href='editberkas_fdw.php'">LENGKAPI BERKAS</button>
-                                <button class="button button-red" onclick="window.location.href='MD.php'">MD</button>
+                                <!-- <button class="button button-red" onclick="window.location.href='MD.php'">MD</button> -->
+                                <button class="button button-red" onclick="md()">MD</button>
                             </div>
                             <div class="toggle-buttons"></div>
                         </div>
@@ -50,7 +51,8 @@
                             <div class="button-container">
                                 <button class="button button-yellow" onclick="window.location.href='editdata_fdw.php'">PERBAIKI DATA</button>
                                 <button class="button button-green" onclick="window.location.href='editberkas_fdw.php'">LENGKAPI BERKAS</button>
-                                <button class="button button-red" onclick="window.location.href='MD.php'">MD</button>
+                                <!-- <button class="button button-red" onclick="window.location.href='MD.php'">MD</button> -->
+                                <button class="button button-red" onclick="md()">MD</button>
                             </div>
                             <div class="toggle-buttons"></div>
                         </div>
@@ -65,7 +67,8 @@
                             <div class="button-container">
                                 <button class="button button-yellow" onclick="window.location.href='editdata_fdw.php'">PERBAIKI DATA</button>
                                 <button class="button button-green" onclick="window.location.href='editberkas_fdw.php'">LENGKAPI BERKAS</button>
-                                <button class="button button-red" onclick="window.location.href='MD.php'">MD</button>
+                                <!-- <button class="button button-red" onclick="window.location.href='MD.php'">MD</button> -->
+                                <button class="button button-red" onclick="md()">MD</button>
                             </div>
                             <div class="toggle-buttons"></div>
                         </div>
@@ -80,7 +83,8 @@
                             <div class="button-container">
                                 <button class="button button-yellow" onclick="window.location.href='editdata_fdw.php'">PERBAIKI DATA</button>
                                 <button class="button button-green" onclick="window.location.href='editberkas_fdw.php'">LENGKAPI BERKAS</button>
-                                <button class="button button-red" onclick="window.location.href='MD.php'">MD</button>
+                                <!-- <button class="button button-red" onclick="window.location.href='MD.php'">MD</button> -->
+
                             </div>
                             <div class="toggle-buttons"></div>
                         </div>
@@ -95,7 +99,8 @@
                             <div class="button-container">
                                 <button class="button button-yellow" onclick="window.location.href='editdata_fdw.php'">PERBAIKI DATA</button>
                                 <button class="button button-green" onclick="window.location.href='editberkas_fdw.php'">LENGKAPI BERKAS</button>
-                                <button class="button button-red" onclick="window.location.href='MD.php'">MD</button>
+                                <!-- <button class="button button-red" onclick="window.location.href='MD.php'">MD</button> -->
+                                <button class="button button-red" onclick="md()">MD</button>
                             </div>
                             <div class="toggle-buttons"></div>
                         </div>
@@ -125,7 +130,8 @@
     <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages -->
-    <script src="../js/sb-admin-2.min.js"></script>
+    <script src="../js/sb-admin-2.min.js"></script>     
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         // function toggleButtons(button) {
@@ -154,6 +160,27 @@ $(document).on('click', '.card', function() {
   // Toggle 'collapsed' class for the clicked card's buttons
   toggleButtons.toggleClass('collapsed');
 });
+
+function md(){
+    Swal.fire({
+  title: "Yakin?",
+  text: "Data yang dihapus tidak bisa dikembalikan.",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Ya, hapus saja",
+  cancelButtonText: "Tidak"
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire({
+      title: "Berhasil!",
+      text: "Data berhasil dihapus.",
+      icon: "success"
+    });
+  }
+});
+}
     </script>
     
     <!-- Include Footer -->
