@@ -88,10 +88,10 @@
             </div>
             <!-- End of Main Content -->
 
-            <?php include '../layout/footer.php'; ?>
+            
         </div>
         <!-- End of Content Wrapper -->
-
+        <?php include '../layout/footer.php'; ?>
     </div>
     <!-- End of Page Wrapper -->
 
@@ -135,8 +135,8 @@
                     "searching": true,
                     "ordering": true,
                     "info": true,
-                    "responsive": true
-                    "fixedHeight": true
+                    "responsive": true,
+                    "fixedHeight": true,
                 });
             }
         });

@@ -71,9 +71,9 @@
 
     <!-- Nav Item - Tracking Files Collapse Menu -->
     <li class="nav-item">
-    <a class="nav-link" href="/">
+    <a class="nav-link" href="../trackingfile/file.php">
             <i class="fas fa-fw fa-wrench"></i>
-            <span>Dashboard</span>
+            <span>Tracking Files</span>
         </a>
     </li>
 

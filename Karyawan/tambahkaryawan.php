@@ -131,10 +131,11 @@
                                         </div>
                                     </div>
                                     <!-- Submit Button and Back Button -->
-                                    <div class="form-actions clearfix">
-                                        <a href="hr.php" class="btn btn-danger" role="button">Kembali</a>
+                                    <div class="form-actions d-flex justify-content-start">
+                                        <a href="hr.php" class="btn btn-danger mr-2" role="button">Kembali</a>
                                         <button type="submit" class="btn btn-primary">Simpan</button>
                                     </div>
+
                                 </fieldset>
 
                                 <hr>
@@ -185,5 +186,6 @@
         <!-- Page level custom scripts -->
         <script src="../js/demo/datatables-demo.js"></script>
 
-    </body>
+</body>
+
 </html>
