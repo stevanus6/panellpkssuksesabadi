@@ -63,7 +63,7 @@
         <!-- Include Sidebar -->
         <?php 
             if (str_contains($_SERVER['SCRIPT_NAME'],'index.php')){
-                include 'layout/sidebar.php';
+                include './layout/sidebar.php';
             }
             else{
                 include '../layout/sidebar.php';
@@ -79,7 +79,7 @@
                 <!-- Include Topbar -->
                 <?php 
             if (str_contains($_SERVER['SCRIPT_NAME'],'index.php')){
-                include 'layout/topbar.php';
+                include './layout/topbar.php';
             }
             else{
                 include '../layout/topbar.php';
@@ -112,7 +112,7 @@
             <!-- Footer -->
             <?php 
             if (str_contains($_SERVER['SCRIPT_NAME'],'index.php')){
-                include 'layout/footer.php';
+                include './layout/footer.php';
             }
             else{
                 include '../layout/footer.php';
@@ -122,7 +122,7 @@
             <!-- Logout -->
             <?php 
             if (str_contains($_SERVER['SCRIPT_NAME'],'index.php')){
-                include 'layout/logout_modal.php';
+                include './layout/logout_modal.php';
             }
             else{
                 include '../layout/logout_modal.php';
