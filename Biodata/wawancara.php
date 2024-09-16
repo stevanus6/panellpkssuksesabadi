@@ -359,7 +359,7 @@
                                 </div>
                                 <!-- Submit Button -->
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary" formaction="upload_berkas.php">Simpan</button>
+                                    <button type="submit" class="btn btn-primary" formaction="upload_berkas">Simpan</button>
                                 </div>
                             </div>
                             <!-- Submit Button -->

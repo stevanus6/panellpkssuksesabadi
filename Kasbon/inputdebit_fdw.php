@@ -145,7 +145,7 @@
 
                                 <!-- Submit Button -->
                                 <div class="form-group">
-                                    <a href="debit_fdw.php" class="btn btn-danger" role="button">Kembali</a>
+                                    <a href="debit_fdw" class="btn btn-danger" role="button">Kembali</a>
                                     <button type="submit" class="btn btn-primary">Simpan Pembayaran</button>
                                 </div>
 

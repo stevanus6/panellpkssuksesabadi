@@ -167,7 +167,7 @@
 
                                 <!-- Submit Button -->
                                 <div class="form-group">
-                                    <a href="pembayaran_pl.php" class="btn btn-danger" role="button">Kembali</a>
+                                    <a href="pembayaran_pl" class="btn btn-danger" role="button">Kembali</a>
                                     <button type="submit" class="btn btn-primary">Simpan Pembayaran</button>
                                 </div>
 

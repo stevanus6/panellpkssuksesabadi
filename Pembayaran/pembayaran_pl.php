@@ -47,7 +47,7 @@
                         </div>
                         <div class="card-body">
                             <div class="form-group text-left">
-                                <a href="inputbayar_pl.php" class="btn btn-primary">Input Data</a>
+                                <a href="inputbayar_pl" class="btn btn-primary">Input Data</a>
                             </div>
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -66,21 +66,21 @@
                                             <td>Tabel A</td>
                                             <td>Deskripsi Tabel A</td>
                                             <td></td>
-                                            <td><a class="btn btn-info" href="editbayar_pl.php">Edit</a></td>
+                                            <td><a class="btn btn-info" href="editbayar_pl">Edit</a></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
                                             <td>Tabel B</td>
                                             <td>Deskripsi Tabel B</td>
                                             <td></td>
-                                            <td><a class="btn btn-info" href="editbayar_pl.php">Edit</a></td>
+                                            <td><a class="btn btn-info" href="editbayar_pl">Edit</a></td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
                                             <td>Tabel C</td>
                                             <td>Deskripsi Tabel C</td>
                                             <td></td>
-                                            <td><a class="btn btn-info" href="editbayar_pl.php">Edit</a></td>
+                                            <td><a class="btn btn-info" href="editbayar_pl">Edit</a></td>
                                         </tr>
                                         <!-- Tambahkan lebih banyak baris sesuai kebutuhan -->
                                     </tbody>

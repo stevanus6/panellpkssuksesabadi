@@ -49,7 +49,7 @@
                         
                         <div class="card-body">
                             <div class="form-group text-left">
-                                <a href="input_gaji.php" class="btn btn-primary">Tambah Data</a>
+                                <a href="input_gaji" class="btn btn-primary">Tambah Data</a>
                             </div>
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">

@@ -47,7 +47,7 @@
                         </div>
                         <div class="card-body">
                             <div class="form-group text-left">
-                                <a href="inputdebit_fdw.php" class="btn btn-primary">Input Data</a>
+                                <a href="inputdebit_fdw" class="btn btn-primary">Input Data</a>
                             </div>
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">

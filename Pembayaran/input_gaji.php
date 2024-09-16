@@ -177,7 +177,7 @@
 
                                 <!-- Buttons -->
                                 <div class="form-group">
-                                    <a href="bayargaji.php" class="btn btn-danger" role="button">Kembali</a>
+                                    <a href="bayargaji" class="btn btn-danger" role="button">Kembali</a>
                                     <button type="button" class="btn btn-primary" id="calculate-btn">Hitung Gaji</button>
                                     <button type="button" class="btn btn-info" id="view-invoice-btn">Lihat Invoice</button>
                                 </div>

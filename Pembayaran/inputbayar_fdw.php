@@ -171,7 +171,7 @@
 
                                 <!-- Buttons -->
                                 <div class="form-group">
-                                    <a href="bayarfdw.php" class="btn btn-danger" role="button">Kembali</a>
+                                    <a href="bayarfdw" class="btn btn-danger" role="button">Kembali</a>
                                     <button type="button" class="btn btn-primary" id="calculate-btn">Hitung Gaji Bersih</button>
                                     <button type="button" class="btn btn-success" id="save-btn">Simpan</button>
                                 </div>

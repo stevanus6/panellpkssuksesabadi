@@ -166,7 +166,7 @@
 
                                 <!-- Submit Button -->
                                 <div class="form-group">
-                                    <a href="laporankeuangan.php" class="btn btn-danger" role="button">Kembali</a>
+                                    <a href="laporankeuangan" class="btn btn-danger" role="button">Kembali</a>
                                     <button type="submit" class="btn btn-primary">Simpan Data</button>
                                 </div>
 

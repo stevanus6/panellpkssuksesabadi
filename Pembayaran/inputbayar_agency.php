@@ -112,7 +112,7 @@
 
                                         <!-- Submit Button -->
                                         <div class="form-group">
-                                        <a href="pembayaran_agency.php" class="btn btn-danger" role="button">Kembali</a>
+                                        <a href="pembayaran_agency" class="btn btn-danger" role="button">Kembali</a>
                                             <button type="submit" class="btn btn-primary">Simpan Pembayaran</button>
                                         </div>
 

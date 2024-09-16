@@ -208,7 +208,7 @@
 
                                 </div>
                                 <hr class="category-divider">
-                                <button class="btn btn-secondary" onclick="window.location.href='fdw_singapore.php';">Kembali</button>
+                                <button class="btn btn-secondary" onclick="window.location.href='fdw_singapore';">Kembali</button>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </fieldset>
                         </form>

@@ -346,7 +346,7 @@
 
                                     <!-- Submit Button -->
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary" formaction="editberkas_fdw.php">Simpan</button>
+                                        <button type="submit" class="btn btn-primary" formaction="editberkas_fdw">Simpan</button>
                                     </div>
 
                             </form>

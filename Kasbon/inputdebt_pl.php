@@ -146,7 +146,7 @@
 
                                 <!-- Buttons -->
                                 <div class="form-group btn-container">
-                                    <a href="debit_pl.php" class="btn btn-danger">Kembali</a>
+                                    <a href="debit_pl" class="btn btn-danger">Kembali</a>
                                     <button type="button" class="btn btn-primary" id="calculate-btn">Simpan Kasbon</button>
                                 </div>
                                 <hr>

@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,57 +42,38 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-
+                    <!-- Card for Document List -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Daftar Berkas</h6>
                         </div>
-                        
                         <div class="card-body">
+                            <div class="form-group text-left">
+                                <a href="tambahberkas.php" class="btn btn-primary">Input Berkas</a>
+                            </div>
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                        <th>ID</th>
-                                        <th>Nama Karyawan</th>
-                                        <th>Total dokumen</th>
-                                        <th>Jumlah Dokumen divalidasi</th>
-                                        <th>Lihat Dokumen</th>
+                                            <th>ID</th>
+                                            <th>Nama Karyawan</th>
+                                            <th>Total Dokumen</th>
+                                            <th>Jumlah Dokumen Divalidasi</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php for($i = 1; $i <= 15; $i++):?> 
+                                        <?php for($i = 1; $i <= 15; $i++): ?> 
                                             <tr>
                                                 <td><?= $i ?></td>
-                                                <td>Orang <?= chr(64+$i) ?></td>
+                                                <td>Orang <?= chr(64 + $i) ?></td>
                                                 <td>15</td>
-                                                <td><?=$i?></td>
-                                                <td class="text-center"><a href="../Biodata/editberkas_fdw" class="btn btn-success px-5  subtle">Lihat</a></td>
+                                                <td><?= $i ?></td>
+                                                <td class="text-center">
+                                                    <a href="../Trackingberkas/updatestatus" class="btn btn-primary px-5 subtle">Update</a>
+                                                </td>
                                             </tr>
                                         <?php endfor; ?>
-                                        <!-- <tr>
-                                            <td>1</td>
-                                            <td>Tabel A</td>
-                                            <td>Deskripsi Tabel A</td>
-                                           <td></td>
-                                           
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Tabel B</td>
-                                            <td>Deskripsi Tabel B</td>
-                                            <td></td>
-                                            
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Tabel C</td>
-                                            <td>Deskripsi Tabel C</td>
-                                            <td></td>
-                                          
-                                        </tr> -->
-
-                                        <!-- Tambahkan lebih banyak baris sesuai kebutuhan -->
                                     </tbody>
                                 </table>
                             </div>
@@ -138,9 +122,7 @@
 
     <script>
         $(document).ready(function() {
-            // Check if DataTable is already initialized
             if (!$.fn.DataTable.isDataTable('#dataTable')) {
-                // Initialize DataTable
                 $('#dataTable').DataTable({
                     "paging": true,
                     "searching": true,

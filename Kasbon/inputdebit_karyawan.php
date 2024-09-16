@@ -139,7 +139,7 @@
 
                                 <!-- Submit Button -->
                                 <div class="form-group">
-                                    <a href="debit_karyawan.php" class="btn btn-danger" role="button">Kembali</a>
+                                    <a href="debit_karyawan" class="btn btn-danger" role="button">Kembali</a>
                                     <button type="submit" class="btn btn-primary">Simpan Hutang</button>
                                 </div>
 
