@@ -49,7 +49,7 @@
                         </div>
                         <div class="card-body">
                             <div class="form-group text-left">
-                                <a href="tambahberkas.php" class="btn btn-primary">Input Berkas</a>
+                                <a href="tambahberkas" class="btn btn-primary">Input Berkas</a>
                             </div>
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
