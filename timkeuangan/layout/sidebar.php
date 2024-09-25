@@ -1,6 +1,9 @@
 <?php
-// Define the base path depending on the current script location
-$basePath = str_contains($_SERVER['SCRIPT_NAME'], 'index') ? 'suksesabadi/' : '../suksesabadi/';
+// Check if the path already contains 'suksesabadi' to avoid duplicating
+$basePath = '';
+if (!str_contains($_SERVER['SCRIPT_NAME'], '/suksesabadi/')) {
+    $basePath = '/suksesabadi/';
+}
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +58,7 @@ $basePath = str_contains($_SERVER['SCRIPT_NAME'], 'index') ? 'suksesabadi/' : '.
 
         <!-- Nav Item - Tracking Files Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'tracking_berkas') ? "#" : $basePath . "Trackingberkas/tracking_berkas" ?>">
+            <a class="nav-link" href="<?= $basePath ?>Trackingberkas/tracking_berkas">
                 <i class="fas fa-fw fa-wrench"></i>
                 <span>Tracking Files</span>
             </a>
@@ -71,19 +74,19 @@ $basePath = str_contains($_SERVER['SCRIPT_NAME'], 'index') ? 'suksesabadi/' : '.
             <div id="collapsePembayaran" class="collapse" aria-labelledby="headingPembayaran"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'pembayaran_agency') ? "#" : $basePath . "Pembayaran/pembayaran_agency" ?>">
+                    <a class="collapse-item" href="<?= $basePath ?>Pembayaran/pembayaran_agency">
                         <i class="fas fa-building fa-sm fa-fw mr-2"></i>
                         Pembayaran Agency
                     </a>
-                    <a class="collapse-item" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'pembayaran_pl') ? "#" : $basePath . "Pembayaran/pembayaran_pl" ?>">
+                    <a class="collapse-item" href="<?= $basePath ?>Pembayaran/pembayaran_pl">
                         <i class="fas fa-user-tie fa-sm fa-fw mr-2"></i>
                         Pembayaran PL
                     </a>
-                    <a class="collapse-item" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'bayargaji') ? "#" : $basePath . "Pembayaran/bayargaji" ?>">
+                    <a class="collapse-item" href="<?= $basePath ?>Pembayaran/bayargaji">
                         <i class="fas fa-money-bill fa-sm fa-fw mr-2"></i>
                         Pembayaran Gaji
                     </a>
-                    <a class="collapse-item" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'bayarfdw') ? "#" : $basePath . "Pembayaran/bayarfdw" ?>">
+                    <a class="collapse-item" href="<?= $basePath ?>Pembayaran/bayarfdw">
                         <i class="fas fa-hand-holding-usd fa-sm fa-fw mr-2"></i>
                         Pembayaran TKW
                     </a>
@@ -101,15 +104,15 @@ $basePath = str_contains($_SERVER['SCRIPT_NAME'], 'index') ? 'suksesabadi/' : '.
             <div id="collapseDebt" class="collapse" aria-labelledby="headingDebt"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'debit_pl') ? "#" : $basePath . "Kasbon/debit_pl" ?>">
+                    <a class="collapse-item" href="<?= $basePath ?>Kasbon/debit_pl">
                         <i class="fas fa-money-bill fa-sm fa-fw mr-2"></i>
                         Kasbon PL
                     </a>
-                    <a class="collapse-item" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'debit_karyawan') ? "#" : $basePath . "Kasbon/debit_karyawan" ?>">
+                    <a class="collapse-item" href="<?= $basePath ?>Kasbon/debit_karyawan">
                         <i class="fas fa-user-tie fa-sm fa-fw mr-2"></i>
                         Kasbon Karyawan
                     </a>
-                    <a class="collapse-item" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'debit_fdw') ? "#" : $basePath . "Kasbon/debit_fdw" ?>">
+                    <a class="collapse-item" href="<?= $basePath ?>Kasbon/debit_fdw">
                         <i class="fas fa-hand-holding-usd fa-sm fa-fw mr-2"></i>
                         Kasbon TKW
                     </a>
@@ -127,7 +130,7 @@ $basePath = str_contains($_SERVER['SCRIPT_NAME'], 'index') ? 'suksesabadi/' : '.
             <div id="collapseCash" class="collapse" aria-labelledby="headingCash"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'laporan_keuangan') ? "#" : $basePath . "Keuangan/laporan_keuangan" ?>">
+                    <a class="collapse-item" href="<?= $basePath ?>Keuangan/laporan_keuangan">
                         <i class="fas fa-money-bill fa-sm fa-fw mr-2"></i>
                         Laporan Keuangan
                     </a>
