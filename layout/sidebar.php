@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php 
+
+$role = "admin";
+// $role = "keuangan";
+// echo $role;
+
+?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,6 +58,7 @@
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
+        <?php if ($role == "admin") : ?>
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBiodata"
                 aria-expanded="true" aria-controls="collapseBiodata">
@@ -72,6 +80,7 @@
                 </div>
             </div>
         </li>
+        <?php endif;?>
 
         <!-- Nav Item - Tracking Files Collapse Menu -->
         <li class="nav-item">
@@ -82,6 +91,7 @@
         </li>
 
         <!-- Nav Item - Pembayaran Collapse Menu -->
+        <?php if ($role =="keuangan") : ?>
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePembayaran"
                 aria-expanded="true" aria-controls="collapsePembayaran">
@@ -153,6 +163,7 @@
                 </div>
             </div>
         </li>
+        <?php endif; ?>
         <!-- Divider -->
         <hr class="sidebar-divider">
 
@@ -160,7 +171,8 @@
         <div class="sidebar-heading">
             Other Page
         </div>
-
+        
+        <?php if ($role == "admin") : ?>
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -179,6 +191,7 @@
                 </div>
             </div>
         </li>
+        <?php endif; ?>
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
