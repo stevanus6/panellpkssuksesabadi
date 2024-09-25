@@ -1,7 +1,7 @@
 <?php
 // Check if the path already contains 'suksesabadi' to avoid duplicating
 $basePath = '';
-if (!str_contains($_SERVER['SCRIPT_NAME'], '/suksesabadi/')) {
+if (strpos($_SERVER['SCRIPT_NAME'], '/suksesabadi/') === false) {
     $basePath = '/suksesabadi/';
 }
 ?>
@@ -42,7 +42,7 @@ if (!str_contains($_SERVER['SCRIPT_NAME'], '/suksesabadi/')) {
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="<?= $basePath ?>index">
+            <a class="nav-link" href="<?= $basePath ?>index.php">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span>
             </a>
@@ -58,7 +58,7 @@ if (!str_contains($_SERVER['SCRIPT_NAME'], '/suksesabadi/')) {
 
         <!-- Nav Item - Tracking Files Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link" href="<?= $basePath ?>Trackingberkas/tracking_berkas">
+            <a class="nav-link" href="<?= $basePath ?>Trackingberkas/tracking_berkas.php">
                 <i class="fas fa-fw fa-wrench"></i>
                 <span>Tracking Files</span>
             </a>
@@ -74,19 +74,19 @@ if (!str_contains($_SERVER['SCRIPT_NAME'], '/suksesabadi/')) {
             <div id="collapsePembayaran" class="collapse" aria-labelledby="headingPembayaran"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= $basePath ?>Pembayaran/pembayaran_agency">
+                    <a class="collapse-item" href="<?= $basePath ?>Pembayaran/pembayaran_agency.php">
                         <i class="fas fa-building fa-sm fa-fw mr-2"></i>
                         Pembayaran Agency
                     </a>
-                    <a class="collapse-item" href="<?= $basePath ?>Pembayaran/pembayaran_pl">
+                    <a class="collapse-item" href="<?= $basePath ?>Pembayaran/pembayaran_pl.php">
                         <i class="fas fa-user-tie fa-sm fa-fw mr-2"></i>
                         Pembayaran PL
                     </a>
-                    <a class="collapse-item" href="<?= $basePath ?>Pembayaran/bayargaji">
+                    <a class="collapse-item" href="<?= $basePath ?>Pembayaran/bayargaji.php">
                         <i class="fas fa-money-bill fa-sm fa-fw mr-2"></i>
                         Pembayaran Gaji
                     </a>
-                    <a class="collapse-item" href="<?= $basePath ?>Pembayaran/bayarfdw">
+                    <a class="collapse-item" href="<?= $basePath ?>Pembayaran/bayarfdw.php">
                         <i class="fas fa-hand-holding-usd fa-sm fa-fw mr-2"></i>
                         Pembayaran TKW
                     </a>
@@ -104,15 +104,15 @@ if (!str_contains($_SERVER['SCRIPT_NAME'], '/suksesabadi/')) {
             <div id="collapseDebt" class="collapse" aria-labelledby="headingDebt"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= $basePath ?>Kasbon/debit_pl">
+                    <a class="collapse-item" href="<?= $basePath ?>Kasbon/debit_pl.php">
                         <i class="fas fa-money-bill fa-sm fa-fw mr-2"></i>
                         Kasbon PL
                     </a>
-                    <a class="collapse-item" href="<?= $basePath ?>Kasbon/debit_karyawan">
+                    <a class="collapse-item" href="<?= $basePath ?>Kasbon/debit_karyawan.php">
                         <i class="fas fa-user-tie fa-sm fa-fw mr-2"></i>
                         Kasbon Karyawan
                     </a>
-                    <a class="collapse-item" href="<?= $basePath ?>Kasbon/debit_fdw">
+                    <a class="collapse-item" href="<?= $basePath ?>Kasbon/debit_fdw.php">
                         <i class="fas fa-hand-holding-usd fa-sm fa-fw mr-2"></i>
                         Kasbon TKW
                     </a>
@@ -130,7 +130,7 @@ if (!str_contains($_SERVER['SCRIPT_NAME'], '/suksesabadi/')) {
             <div id="collapseCash" class="collapse" aria-labelledby="headingCash"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= $basePath ?>Keuangan/laporan_keuangan">
+                    <a class="collapse-item" href="<?= $basePath ?>Keuangan/laporan_keuangan.php">
                         <i class="fas fa-money-bill fa-sm fa-fw mr-2"></i>
                         Laporan Keuangan
                     </a>
