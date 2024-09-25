@@ -357,6 +357,16 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- New Status Dropdown -->
+                        <div class="form-group">
+                            <label for="approval_status">Status:</label>
+                            <select class="form-control" id="approval_status" name="approval_status">
+                                <option value="">Select Status</option>
+                                <option value="approved">Approved</option>
+                                <option value="denied">Denial</option>
+                            </select>
+                        </div>
                                 <!-- Submit Button -->
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary" formaction="upload_berkas">Simpan</button>

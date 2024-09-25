@@ -23,7 +23,7 @@
     <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <style>
-        
+        /* Optional styles if needed */
     </style>
 </head>
 
@@ -142,7 +142,6 @@
                                     </div>
                                 </div>
                                 <hr class="category-divider">
-                                <!-- <button class="btn btn-secondary" onclick="window.location.href='fdw_singapore.php';">Kembali</button> -->
                                 <a href="./fdw_singapore" class="btn btn-secondary">Kembali</a>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </fieldset>
@@ -157,14 +156,12 @@
 
         </div>
         <!-- End of Content Wrapper -->
+
         <!-- Include Footer -->
         <?php include '../layout/footer.php'; ?>
 
         <!-- Include Logout -->
         <?php include '../layout/logout_modal.php'; ?>
-
-    </div>
-    <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
@@ -175,8 +172,8 @@
     </a>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -184,6 +181,7 @@
     <!-- Custom scripts for all pages-->
     <script src="../js/sb-admin-2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- Page level plugins -->
     <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>

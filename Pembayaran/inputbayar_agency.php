@@ -87,18 +87,15 @@
                                             <h5>Informasi Pembayaran</h5>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <!-- ID Pembayaran Agency -->
-                                                    <div class="form-group">
-                                                        <label for="payment-id">ID Pembayaran Agency:</label>
-                                                        <input type="text" class="form-control" id="payment-id" name="payment_id" placeholder="Masukkan ID Pembayaran">
-                                                    </div>
-
                                                     <!-- Nama Agency Pengirim -->
                                                     <div class="form-group">
                                                         <label for="agency-name">Nama Agency Pengirim:</label>
                                                         <input type="text" class="form-control" id="agency-name" name="agency_name" placeholder="Masukkan Nama Agency Pengirim">
                                                     </div>
-
+                                                    <div class="form-group">
+                                                        <label for="dob">Tanggal:</label>
+                                                        <input type="date" class="form-control" id="dob" name="dob">
+                                                    </div>
                                                     <!-- Upload Document -->
                                                     <div class="form-group">
                                                         <label for="upload-document">Upload Bukti Dokumen:</label>
@@ -112,7 +109,7 @@
 
                                         <!-- Submit Button -->
                                         <div class="form-group">
-                                        <a href="pembayaran_agency" class="btn btn-danger" role="button">Kembali</a>
+                                            <a href="pembayaran_agency" class="btn btn-danger" role="button">Kembali</a>
                                             <button type="submit" class="btn btn-primary">Simpan Pembayaran</button>
                                         </div>
 

@@ -19,9 +19,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="../css/topandsidebar.css" rel="stylesheet">
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
 
 </head>
 
@@ -45,6 +43,19 @@
                 <!-- Begin Page Content -->
                 <div class="container py-4">
                     <div class="row">
+                        <div class="col-md-12 d-flex justify-content-end">
+                            <div class="input-group w-25 mb-4">
+                                <input type="text" id="searchInput" class="form-control" placeholder="Pencarian Nama TKW" onkeyup="searchEmployee()">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row" id="employeeCards">
                         <?php
                         // Dummy data array
                         $employees = [
@@ -89,11 +100,11 @@
                             $buttonStyle = ($employee['status'] === 'LENGKAP') ? 'background-color: gray; color: white;' : '';
 
                             echo '
-        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="col-lg-4 col-md-6 mb-4 employee-card">
             <div class="card h-100">
                 <img src="' . $employee['image'] . '" class="card-img-top mt-3" style="width: 150px; height: 200px; display: block; margin: 0 auto; border-radius: 15px;" alt="Profile Picture">
                 <div class="card-body text-center">
-                    <h5 class="card-title">' . $employee['name'] . '</h5>
+                    <h5 class="card-title employee-name">' . $employee['name'] . '</h5>
                     <p class="card-text">STATUS BERKAS: ' . $employee['status'] . '</p>
                     <p class="card-text">BERKAS: ' . $employee['berkas'] . '</p>
                 </div>
@@ -139,16 +150,22 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <script>
-        function toggleButtons(button) {
-            const buttonContainer = button.previousElementSibling;
-            const isShown = buttonContainer.style.maxHeight !== '0px';
-            document.querySelectorAll('.button-container').forEach(container => {
-                container.style.maxHeight = '0px';
-                container.nextElementSibling.classList.add('collapsed');
-            });
+        function searchEmployee() {
+            // Get the input value
+            const searchValue = document.getElementById('searchInput').value.toUpperCase();
+            const employeeCards = document.getElementsByClassName('employee-card');
 
-            buttonContainer.style.maxHeight = isShown ? '0px' : '150px';
-            button.classList.toggle('collapsed', isShown);
+            // Loop through all employee cards
+            for (let i = 0; i < employeeCards.length; i++) {
+                let employeeName = employeeCards[i].getElementsByClassName('employee-name')[0].innerText;
+
+                // If the name matches the search input, display the card, otherwise hide it
+                if (employeeName.toUpperCase().indexOf(searchValue) > -1) {
+                    employeeCards[i].style.display = '';
+                } else {
+                    employeeCards[i].style.display = 'none';
+                }
+            }
         }
     </script>
 

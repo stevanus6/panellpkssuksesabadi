@@ -1,0 +1,51 @@
+.hidden {
+    display: none;
+}
+
+fieldset {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    border-bottom: 2px solid #007bff;
+    margin-bottom: 15px;
+}
+
+hr.category-divider {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+.btn-secondary {
+    margin-right: 10px;
+}
+
+/* Flexbox for two-column layout */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Optional: space between columns */
+}
+
+.form-column {
+    flex: 1;
+    min-width: 300px;
+    /* Minimum width of columns */
+}
+
+.form-column label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-column .form-group {
+    margin-bottom: 15px;
+}

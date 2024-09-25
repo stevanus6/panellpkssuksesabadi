@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="editdata_fdw.css">
 
     <style>
- 
+
     </style>
 </head>
 
@@ -59,7 +59,6 @@
 
                                     <!-- Informasi Pribadi -->
                                     <fieldset class="form-section">
-                                        <h5>1. Informasi Pribadi</h5>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <!-- Nama -->
@@ -130,24 +129,32 @@
                                                         <option value="Konghucu">Konghucu</option>
                                                     </select>
                                                 </div>
+
                                                 <!-- Nomor HP -->
                                                 <div class="form-group">
                                                     <label for="contact">Nomor HP:</label>
                                                     <input type="text" class="form-control" id="contact" name="contact" placeholder="Masukkan nomor HP Calon TKI">
                                                 </div>
+
                                                 <!-- Alamat -->
                                                 <div class="form-group">
                                                     <label for="address">Alamat:</label>
                                                     <textarea class="form-control" id="address" name="address" rows="3" placeholder="Masukkan alamat lengkap Calon TKI"></textarea>
                                                 </div>
+
+                                                <!-- Upload Foto -->
+                                                <div class="form-group">
+                                                    <label for="photo">Upload Foto:</label>
+                                                    <input type="file" class="" id="photo" name="photo" accept="image/*">
+                                                </div>
                                             </div>
                                         </div>
                                     </fieldset>
 
+
                                     <hr>
                                     <!-- Informasi Keluarga -->
                                     <fieldset class="form-section">
-                                        <h5>2. Informasi Keluarga</h5>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <!-- Nama Ayah -->
@@ -217,7 +224,6 @@
 
                                     <hr>
                                     <fieldset class="form-section">
-                                        <h5>3. Education Form (Formulir Pendidikan)</h5>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <!-- Pendidikan SD -->
@@ -284,8 +290,6 @@
                                     <hr>
 
                                     <fieldset class="form-section">
-                                        <h5>4. Previous Employment History (Riwayat Pekerjaan Sebelumnya)</h5>
-
                                         <!-- Pengalaman Kerja Detail -->
                                         <div id="work-experience-details">
                                             <div class="row">
@@ -343,11 +347,18 @@
                                     </fieldset>
 
                                     <hr>
+                                    <!-- Submit and Back Buttons -->
+                                    <div class="form-group d-flex justify-content-behind">
+                                        <!-- Tombol Kembali -->
+                                        <a href="daftar_fdw" class="btn btn-danger">Kembali</a>
 
-                                    <!-- Submit Button -->
-                                    <div class="form-group">
+                                        <!-- Tombol Simpan -->
                                         <button type="submit" class="btn btn-primary" formaction="editberkas_fdw">Simpan</button>
                                     </div>
+
+
+
+
 
                             </form>
                         </div>

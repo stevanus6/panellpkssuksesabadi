@@ -74,29 +74,37 @@
                     <!-- Document Input Form -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Update Berkas Dokumen</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Update Berkas</h6>
                         </div>
                         <div class="card-body">
-                            <form action="process_document_update.php" method="post" enctype="multipart/form-data">
-                                <!-- Hidden Document ID -->
-                                <input type="hidden" id="document-id" name="document_id" value="<?php echo htmlspecialchars($document_id); ?>">
+                            <form action="process_document.php" method="post" enctype="multipart/form-data">
 
                                 <!-- Document Input Fields -->
                                 <fieldset class="form-section">
                                     <h5>Informasi Dokumen</h5>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <!-- Document Name -->
+                                            <!-- Document ID -->
                                             <div class="form-group">
-                                                <label for="document-name">Nama Dokumen:</label>
-                                                <input type="text" class="form-control" id="document-name" name="document_name" placeholder="Masukkan Nama Dokumen" value="<?php echo htmlspecialchars($document_name); ?>" required>
+                                                <label for="document-id">Nama Berkas:</label>
+                                                <input type="text" class="form-control" id="document-id" name="document_id" placeholder="Masukkan Nama Berkas">
                                             </div>
-
                                             <!-- Upload Document -->
                                             <div class="form-group">
-                                                <label for="upload-document">Upload Dokumen (jika ingin mengubah):</label>
+                                                <label for="upload-document">Upload Dokumen:</label>
                                                 <input type="file" class="form-control-file" id="upload-document" name="upload_document">
                                             </div>
+                                            <!-- Dropdown Status -->
+                                            <div class="form-group">
+                                                <label for="document-status">Status Berkas:</label>
+                                                <select class="form-control" id="document-status" name="document_status">
+                                                    <option value="" disabled selected>Pilih Status</option>
+                                                    <option value="diambil">Diambil</option>
+                                                    <option value="diproses">Diproses</option>
+                                                    <option value="selesai">Selesai</option>
+                                                </select>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </fieldset>
@@ -106,7 +114,7 @@
                                 <!-- Submit Button -->
                                 <div class="form-group">
                                     <a href="tracking_berkas" class="btn btn-danger" role="button">Kembali</a>
-                                    <button type="submit" class="btn btn-primary">Update Dokumen</button>
+                                    <button type="submit" class="btn btn-primary">Simpan Dokumen</button>
                                 </div>
 
                             </form>
@@ -123,10 +131,13 @@
         </div>
         <!-- End of Page Wrapper -->
 
+        <!-- Include Footer -->
+        <?php include '../layout/footer.php'; ?>
         <!-- Scroll to Top Button-->
         <a class="scroll-to-top rounded" href="#page-top">
             <i class="fas fa-angle-up"></i>
         </a>
+
 
         <!-- Logout Modal-->
         <?php include '../layout/logout_modal.php'; ?>
@@ -150,10 +161,7 @@
 
         <!-- Page level custom scripts -->
         <script src="../js/demo/datatables-demo.js"></script>
-        <!-- Include Footer -->
-        <?php include '../layout/footer.php'; ?>
 
-    </div>
 </body>
 
 </html>

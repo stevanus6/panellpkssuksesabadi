@@ -146,7 +146,7 @@
             <div id="collapseCash" class="collapse" aria-labelledby="headingCash"
                 data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'index') ? "./Keuangan/laporan_keuangan" : (str_contains($_SERVER['SCRIPT_NAME'], 'laporan_keuangan') ? "#" : "../Keuangan/laporankeuangan") ?>">
+                    <a class="collapse-item" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'index') ? "./Keuangan/laporan_keuangan" : (str_contains($_SERVER['SCRIPT_NAME'], 'laporan_keuangan') ? "#" : "../Keuangan/laporan_keuangan") ?>">
                         <i class="fas fa-money-bill fa-sm fa-fw mr-2"></i>
                         Laporan Keuangan
                     </a>

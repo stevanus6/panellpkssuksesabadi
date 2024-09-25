@@ -1,0 +1,11 @@
+.topbar{
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar{
+    transform: translateY(70px);
+    border-top-right-radius: 36px;
+}

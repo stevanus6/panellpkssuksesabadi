@@ -46,17 +46,18 @@
                             <h6 class="m-0 font-weight-bold text-primary">Daftar Pembayaran PL</h6>
                         </div>
                         <div class="card-body">
-                            <div class="form-group text-left">
+                            <!-- <div class="form-group text-left">
                                 <a href="inputbayar_pl" class="btn btn-primary">Input Data</a>
-                            </div>
+                            </div> -->
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Nama Agency Pengirim</th>
+                                            <th>Nama PL</th>
                                             <th>Tanggal</th>
-                                            <th>Status Pembayaran</th>
+                                            <th>Status</th>
+                                            <th>Fee</th>
+                                            <th>Update By</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -66,6 +67,7 @@
                                             <td>Tabel A</td>
                                             <td>Deskripsi Tabel A</td>
                                             <td></td>
+                                            <td></td>
                                             <td><a class="btn btn-info" href="editbayar_pl">Edit</a></td>
                                         </tr>
                                         <tr>
@@ -73,12 +75,14 @@
                                             <td>Tabel B</td>
                                             <td>Deskripsi Tabel B</td>
                                             <td></td>
+                                            <td></td>
                                             <td><a class="btn btn-info" href="editbayar_pl">Edit</a></td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
                                             <td>Tabel C</td>
                                             <td>Deskripsi Tabel C</td>
+                                            <td></td>
                                             <td></td>
                                             <td><a class="btn btn-info" href="editbayar_pl">Edit</a></td>
                                         </tr>

@@ -86,21 +86,25 @@
                                         <div class="col-md-6">
                                             <!-- Document ID -->
                                             <div class="form-group">
-                                                <label for="document-id">ID Dokumen:</label>
-                                                <input type="text" class="form-control" id="document-id" name="document_id" placeholder="Masukkan ID Dokumen">
+                                                <label for="document-id">Nama Berkas:</label>
+                                                <input type="text" class="form-control" id="document-id" name="document_id" placeholder="Masukkan Nama Berkas">
                                             </div>
-
-                                            <!-- Document Name -->
-                                            <div class="form-group">
-                                                <label for="document-name">Nama Dokumen:</label>
-                                                <input type="text" class="form-control" id="document-name" name="document_name" placeholder="Masukkan Nama Dokumen">
-                                            </div>
-
                                             <!-- Upload Document -->
                                             <div class="form-group">
                                                 <label for="upload-document">Upload Dokumen:</label>
                                                 <input type="file" class="form-control-file" id="upload-document" name="upload_document">
                                             </div>
+                                            <!-- Dropdown Status -->
+                                            <div class="form-group">
+                                                <label for="document-status">Status Berkas:</label>
+                                                <select class="form-control" id="document-status" name="document_status">
+                                                    <option value="" disabled selected>Pilih Status</option>
+                                                    <option value="diambil">Diambil</option>
+                                                    <option value="diproses">Diproses</option>
+                                                    <option value="selesai">Selesai</option>
+                                                </select>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </fieldset>
@@ -127,6 +131,8 @@
         </div>
         <!-- End of Page Wrapper -->
 
+        <!-- Include Footer -->
+        <?php include '../layout/footer.php'; ?>
         <!-- Scroll to Top Button-->
         <a class="scroll-to-top rounded" href="#page-top">
             <i class="fas fa-angle-up"></i>
@@ -155,8 +161,7 @@
 
         <!-- Page level custom scripts -->
         <script src="../js/demo/datatables-demo.js"></script>
-        <!-- Include Footer -->
-        <?php include '../layout/footer.php'; ?>
+
 </body>
 
 </html>

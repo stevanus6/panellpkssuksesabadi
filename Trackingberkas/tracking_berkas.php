@@ -56,9 +56,10 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Nama Karyawan</th>
-                                            <th>Total Dokumen</th>
-                                            <th>Jumlah Dokumen Divalidasi</th>
+                                            <th>Nama Berkas</th>
+                                            <th>Status Berkas</th>
+                                            <th>Created At</th>
+                                            <th>Created By</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -67,6 +68,7 @@
                                             <tr>
                                                 <td><?= $i ?></td>
                                                 <td>Orang <?= chr(64 + $i) ?></td>
+                                                <td>15</td>
                                                 <td>15</td>
                                                 <td><?= $i ?></td>
                                                 <td class="text-center">
