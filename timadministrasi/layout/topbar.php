@@ -20,7 +20,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img class="img-profile rounded-circle"
-                            src="img/undraw_profile.svg">
+                            src="<?= str_contains($_SERVER['SCRIPT_NAME'], "index.php") ? "./img/undraw_profile.svg" : "../img/undraw_profile.svg" ?>">
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

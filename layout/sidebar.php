@@ -57,7 +57,7 @@ if (isset($_POST['role'])){
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
-        <?php if ($_SESSION['role'] == 'administrasi') : ?>
+        <?php if ($_SESSION['role'] == 'administrasi' || $_SESSION['role'] == 'admin') : ?>
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBiodata"
                 aria-expanded="true" aria-controls="collapseBiodata">
