@@ -33,7 +33,11 @@
                             Logout
                         </a>
                     </div>
-
+                </li>
+                <li class="d-flex align-items-center">
+                    <form action="./" method="post">
+                        <input type="text" name="role" id="" placeholder="ketik role">
+                    </form>
                 </li>
 
             </ul>

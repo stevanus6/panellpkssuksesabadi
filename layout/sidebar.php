@@ -2,11 +2,10 @@
 <html lang="en">
 
 <?php 
-
-$role = "admin";
-// $role = "keuangan";
-// echo $role;
-
+session_start();
+if (isset($_POST['role'])){
+    $_SESSION['role'] = $_POST['role'];
+}
 ?>
 <head>
     <meta charset="utf-8">
@@ -34,7 +33,7 @@ $role = "admin";
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" style="height: 80px;">
             <div class="sidebar-brand-icon">
-                <img src="../img/digitalkreasi.png" alt="Logo" style="width: 60px; height: auto; object-fit: contain;">
+                <img src="<?= str_contains($_SERVER['SCRIPT_NAME'], 'index.php') ? "./img/digitalkreasi.png" : "../img/digitalkreasi.png" ?>" alt="Logo" style="width: 60px; height: auto; object-fit: contain;">
             </div>
         </a>
 
@@ -43,7 +42,7 @@ $role = "admin";
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="../index">
+            <a class="nav-link" href="">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span>
             </a>
@@ -58,7 +57,7 @@ $role = "admin";
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
-        <?php if ($role == "admin") : ?>
+        <?php if ($_SESSION['role'] == 'administrasi') : ?>
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBiodata"
                 aria-expanded="true" aria-controls="collapseBiodata">
@@ -91,7 +90,7 @@ $role = "admin";
         </li>
 
         <!-- Nav Item - Pembayaran Collapse Menu -->
-        <?php if ($role =="keuangan") : ?>
+        <?php if ($_SESSION['role'] == 'admin' || $_SESSION['role'] == "keuangan") : ?>
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePembayaran"
                 aria-expanded="true" aria-controls="collapsePembayaran">
@@ -165,6 +164,7 @@ $role = "admin";
         </li>
         <?php endif; ?>
         <!-- Divider -->
+        <?php if ($_SESSION['role'] == "administrasi" || $_SESSION['role'] == "admin") : ?>
         <hr class="sidebar-divider">
 
         <!-- Heading -->
@@ -172,7 +172,6 @@ $role = "admin";
             Other Page
         </div>
         
-        <?php if ($role == "admin") : ?>
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
@@ -191,23 +190,23 @@ $role = "admin";
                 </div>
             </div>
         </li>
-        <?php endif; ?>
-
+        
         <!-- Nav Item - Charts -->
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePickets"
-                aria-expanded="true" aria-controls="#collapsePickets">
-                <i class="fas fa-fw fa-calendar"></i>
-                <span>Jadwal Piket</span>
+            aria-expanded="true" aria-controls="#collapsePickets">
+            <i class="fas fa-fw fa-calendar"></i>
+            <span>Jadwal Piket</span>
+        </a>
+        <div id="collapsePickets" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'index') ? "./Piket/jadwalpiket" : (str_contains($_SERVER['SCRIPT_NAME'], 'jadwalpiket') ? "#" : "../Piket/jadwalpiket") ?>">
+                <i class="fas fa-fw fa-calendar-day"></i> Jadwal Piket
             </a>
-            <div id="collapsePickets" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'index') ? "./Piket/jadwalpiket" : (str_contains($_SERVER['SCRIPT_NAME'], 'jadwalpiket') ? "#" : "../Piket/jadwalpiket") ?>">
-                        <i class="fas fa-fw fa-calendar-day"></i> Jadwal Piket
-                    </a>
-                </div>
-            </div>
+        </div>
+        </div>
         </li>
+        <?php endif; ?>
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">

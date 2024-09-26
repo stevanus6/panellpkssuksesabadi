@@ -59,7 +59,7 @@
             </a>
             <div id="collapseBiodata" class="collapse" aria-labelledby="headingBiodata" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'index') ? "./Biodata/daftar_fdw" : (str_contains($_SERVER['SCRIPT_NAME'], 'daftar_fdw') ? "#" : "../Biodata/daftar_fdw") ?>">
+                    <a class="collapse-item" href="<?= str_contains($_SERVER['SCRIPT_NAME'], 'index.php') ? "./Biodata/daftar_fdw" : (str_contains($_SERVER['SCRIPT_NAME'], 'daftar_fdw') ? "#" : "../Biodata/daftar_fdw") ?>">
                         <i class="fas fa-list-ul fa-sm fa-fw mr-2"></i>
                         Daftar TKW
                     </a>
